@@ -14,6 +14,8 @@
 }
 
 body {
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
 }
@@ -56,6 +58,124 @@ a {
 
 .neutral-star {
     color: var(--main-bg-color)
+}
+
+/******* Nav *******/
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav img {
+  height: 19px;
+}
+
+.nav-container {
+  height: 79px;
+  display: flex;
+  gap: 68px;
+}
+
+.nav-container a {
+  padding-top: 8px;
+  border-top: 3px solid transparent;
+  text-decoration: none;
+}
+
+.nav-container a:hover {
+  color: var(--main-color);
+  border-top-color: var(--main-color);
+}
+
+/****** Header ******/
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar i {
+  background: var(--main-bg-color);
+  border-radius: 15px 0 0 15px;
+  padding: 10px;
+}
+
+.search-bar input {
+  padding: 9px 0;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid var(--main-bg-color);
+  border-bottom: 1px solid var(--main-bg-color);
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.search-bar input::placeholder {
+  color: black;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar button {
+  background: var(--main-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.filter-selector {
+  display: flex;
+  align-items: center;
+}
+
+.filter-selector p {
+  margin-right: -26px;
+  font-weight: bold;
+}
+
+.filter-selector ul {
+  gap: 15px;
+  display: flex;
+  list-style: none;
+}
+
+.filter-selector li {
+  border: 2px solid var(--main-bg-color);
+  border-radius: 25px;
+  padding: 4px 19px;
+}
+
+header .fa-solid {
+  color: var(--main-color);
+}
+
+.filter-selector li:hover {
+  background: #DEEBFF;
+}
+
+.filter-selector button {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+}
+
+.infos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.infos .fa-info {
+  border: 1px solid var(--main-bg-color);
+  padding: 6px 10px;
+  border-radius: 50%;
+  font-size: 10px;
 }
 
 /****** Hebergements And Populaires ***********/
