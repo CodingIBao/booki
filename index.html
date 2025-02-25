@@ -32,20 +32,27 @@
         </div>
       </nav>
       <header>
-        <h1 class="section-title">
-          Trouvez votre hébergements pour des vacances de rêve
-        </h1>
-        <p>En plein centre-ville ou en pleine nature</p>
+        <div class="header-title">
+          <h1 class="section-title">
+            Trouvez votre hébergements pour des vacances de rêve
+          </h1>
+          <p>En plein centre-ville ou en pleine nature</p>
+        </div>
         <form class="search-bar" onsubmit="return false;">
           <i class="fa-solid fa-location-dot"></i>
-          <input type="text" name="location" placeholder="Marseille, France" />
+          <input
+            class="euro"
+            type="text"
+            name="location"
+            placeholder="Marseille, France"
+          />
           <button type="submit">
-            <span class="search-text">Rechercher</span>
+            <span class="euro">Rechercher</span>
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </form>
         <div class="filter-selector">
-          <p>Filtres</p>
+          <p class="euro">Filtres</p>
           <ul>
             <li>
               <i class="fa-solid fa-money-bill-wave"></i>
@@ -74,7 +81,7 @@
         <div class="hebergements-and-populaires">
           <section class="hebergements" id="hebergements">
             <h2>Hébergements à Marseille</h2>
-            <div class="hebergements-cards-header">
+            <div class="hebergements-cards">
               <a href="#">
                 <article class="card">
                   <img
@@ -156,8 +163,6 @@
                   </div>
                 </article>
               </a>
-            </div>
-            <div class="hebergements-cards-footer">
               <a href="#">
                 <article class="card">
                   <img
@@ -240,7 +245,9 @@
                 </article>
               </a>
             </div>
-            <button class="show-more">Afficher plus</button>
+            <div>
+              <button class="show-more">Afficher plus</button>
+            </div>
           </section>
           <section class="populaires">
             <div class="populaires-title">

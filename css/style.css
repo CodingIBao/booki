@@ -1,5 +1,8 @@
 /****** General ***********/
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -23,6 +26,15 @@ body {
   max-width: 1440px;
   padding: 0 50px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 a {
@@ -31,7 +43,6 @@ a {
 }
 
 .section-title {
-  margin: 0;
   font-size: 22px;
 }
 
@@ -87,6 +98,18 @@ nav img {
 }
 
 /****** Header ******/
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .search-bar {
   display: flex;
   align-items: center;
@@ -95,17 +118,22 @@ nav img {
 .search-bar .fa-location-dot {
   background: var(--main-bg-color);
   border-radius: 15px 0 0 15px;
-  padding: 10px;
+  padding: 17.6px;
+}
+
+.search-bar input,
+.search-bar button {
+  font-size: 18px;
 }
 
 .search-bar input {
-  padding: 9px 0 9px 42px;
+  text-align: center;
+  padding: 14px 0;
   border-left: none;
   border-right: none;
   border-top: 1px solid var(--main-bg-color);
   border-bottom: 1px solid var(--main-bg-color);
   color: black;
-  font-weight: bold;
 }
 
 .search-bar input::placeholder {
@@ -120,7 +148,7 @@ nav img {
   background: var(--main-color);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 15px 16px;
   border-radius: 0px 15px 15px 0px;
   cursor: pointer;
 }
@@ -132,11 +160,11 @@ nav img {
 .filter-selector {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 
-.filter-selector p {
-  margin-right: -26px;
-  font-weight: bold;
+.filter-selector p{
+  font-size: 18px;
 }
 
 .filter-selector ul {
@@ -146,14 +174,19 @@ nav img {
 }
 
 .filter-selector li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   border: 2px solid var(--main-bg-color);
   border-radius: 25px;
   padding: 4px 19px;
   cursor: pointer;
+  height: 50px;
+  width: auto;
 }
 
 .filter-selector li:hover {
-  background: #DEEBFF;
+  background: var(--filter-bg-color);
 }
 
 .filter-selector button {
@@ -161,6 +194,7 @@ nav img {
   border: none;
   font-weight: bold;
   cursor: pointer;
+  font-size: 17px;
 }
 
 .infos {
@@ -170,10 +204,14 @@ nav img {
 }
 
 .infos .fa-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
   border: 1px solid var(--main-bg-color);
-  padding: 6px 10px;
   border-radius: 50%;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -186,46 +224,43 @@ nav img {
   background-color: var(--main-bg-color);
   border-radius: 20px;
   padding: 30px;
-  box-sizing: border-box;
 }
 
 /****** Hebergements ***********/
 .hebergements {
   width: 65%;
-}
-
-.hebergements h2 {
-  margin-top: 0;
-}
-
-.hebergements-cards-header,
-.hebergements-cards-footer {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.hebergements-cards-footer {
-  margin-top: 30px;
+.hebergements-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
 }
 
-.hebergements-cards-header img,
-.hebergements-cards-footer img {
+.hebergements-cards img {
   height: 124px;
-  width: 240px;
+  width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-.hebergements-cards-header .card-content,
-.hebergements-cards-footer .card-content {
-  padding-left: 15px;
+.hebergements-cards .card-content {
+  padding: 0 15px;
+}
+
+.hebergements-cards .card-subtitle {
+  margin: 8px 0;
 }
 
 .show-more {
   border: none;
   font-weight: bold;
-  margin-top: 30px;
   font-size: 18px;
+  cursor: pointer;
 }
 
 /****** Populaires ***********/
@@ -256,16 +291,11 @@ nav img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-sizing: border-box;
 }
 
 .populaires-cards .card-title {
   margin-top: 10px;
   margin-bottom: 4px;
-}
-
-.populaires-cards .card-subtitle {
-  margin: 0;
 }
 
 .populaires-cards .card-rating {
