@@ -216,6 +216,7 @@ header {
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
+  margin-top: 9px;
   display: flex;
   justify-content: space-between;
 }
@@ -232,47 +233,44 @@ header {
 }
 
 .hebergements {
-  margin-top: 9px;
   width: 65%;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.hebergements-cards {
+.hebergements-cards-header,
+.hebergements-cards-footer {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
 }
 
-.hebergements-cards .card {
-  flex: 1 1 calc(33.33% - 30px);
-  min-width: 250px;
-  max-width: calc(33.33% - 30px);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+.hebergements-cards-header a,
+.hebergements-cards-footer a {
+  width: 30.7%;
 }
 
-.hebergements-cards img {
-  height: 124px;
+.hebergements-cards-header img,
+.hebergements-cards-footer img {
+  height: 114px;
   width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  object-fit: cover;
 }
 
-.hebergements-cards .card-content {
-  padding: 0 15px;
+.hebergements-cards-header .card-content,
+.hebergements-cards-footer .card-content {
+  padding: 7px 15px 0 15px;
 }
 
-.hebergements-cards .card-subtitle {
-  margin: 8px 0;
+.hebergements-cards-header .card-subtitle,
+.hebergements-cards-footer .card-subtitle {
+  margin: 7px 0 4px 0;
 }
 
-.hebergements-cards .card-rating {
-  margin-bottom: 8px;
+.hebergements-cards-header .card-rating,
+.hebergements-cards-footer .card-rating {
+  margin-bottom: 4px;
 }
 
 .show-more {
@@ -295,14 +293,13 @@ header {
 
 .populaires-cards .card {
   display: flex;
-  margin-top: 33px;
+  margin-top: 30px;
 }
 
 .populaires-cards img {
   width: 33%;
   height: 136px;
   border-radius: 20px 0 0 20px;
-  object-fit: cover;
 }
 
 .populaires-cards .card-content {
@@ -335,14 +332,11 @@ header {
 .activites-card {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 30px;
 }
 
 .activites-card a {
-  flex: 1 1 calc(25% - 30px);
-  min-width: 193.5px;
-  max-width: 297.5px;
+  width: 30%;
 }
 
 .activites-card-container {
