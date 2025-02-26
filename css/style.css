@@ -406,16 +406,19 @@ footer {
   }
 
   .populaires-cards a {
-    width: 30%;
+    width: 31%;
   }
 
-  .populaires-cards .card-title {
-    font-size: 14px;
+  .activites-card-container {
+    height: 270px;
   }
 
-  .populaires-cards .card-subtitle {
-    font-size: 13px;
+  .activites-card-container img {
+    height: 200px;
   }
+
+  .footer-container {
+    width: 84%;
 }
 
 /* Small devices (phones, less than 768px) */
